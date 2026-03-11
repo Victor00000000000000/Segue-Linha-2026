@@ -13,3 +13,7 @@ PonteH::PonteH(int8_t I1,int8_t I2,int8_t STDBY,int8_t pinoPWM,int8_t canalPWM)
     this->canalPWM = canalPWM;
     // this->atributo = parâmetro; significa que o atributo desse objeto (ponte h) recebe o valor passado no parâmetro do construtor
 }
+
+void PonteH::iniciar(){
+    
+}

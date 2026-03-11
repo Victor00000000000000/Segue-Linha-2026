@@ -9,8 +9,7 @@ enum ModoPonte
     FRENTE,
     TRAS,
     FREIO_CURTO,
-    PARAR,
-    STANDBY  
+    PARAR
 };
 /* 
 Através dos pinos de input da ponte H você tem acesso a 4 modos :
@@ -38,7 +37,7 @@ class PonteH{
     *Inicia e configura o canal de pwm
     */
 
-    void esperar();
+    void dormir();
     /*
     *Deixa a Ponte H em standby economizando energia
     */
@@ -65,9 +64,17 @@ class PonteH{
    int8_t pinoPWM;
    int8_t canalPWM;
 
-   void setmodoponte();
+   void setmodoponte(ModoPonte modo);
    /*
-   *Define quais pinos deixar em alto para cada modo
+   *Define quais pinos deixar em alto para cada modo/direção
+   */
+   void ativarSTDBY();
+   /*
+   *Ativa o modo standby da ponte h, onde ela é colocada no modo "economia de energia"
+   */
+   void desativarSTDBY();
+   /*
+   *Desativa o modo standby, só desativando esse modo a ponte consegue acessar os outros e iniciar o movimento
    */
 
 
