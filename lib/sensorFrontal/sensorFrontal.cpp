@@ -11,7 +11,7 @@ void SensorFrontal::ler(){
 
     for (int i = 0; i < 8; i++){
         //Setar o mux em binário, aumentando de 0 a 7 com as iterações do loop for
-
+        
         //Esperar a tensão estabilizar
         delayMicroseconds(300);
         //Ler o valor, converter para um double representando a voltagem lida e salvar o valor no atributo 'leituras'

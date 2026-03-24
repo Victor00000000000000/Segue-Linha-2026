@@ -17,7 +17,7 @@ class SensorFrontal{
 
     private:
 
-    //Um array de ints com a medida de cada sensor
+    //Um array de doubles com a medida de cada sensor em volts
     double leituras[8];
 
     //Um array para as portas associadas aos seletores do mux
